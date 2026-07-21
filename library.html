@@ -17,7 +17,7 @@
     const send = document.createElement('button');
     send.textContent = `Send HTML`;
     send.addEventListener('click', () => {
-      port2.postMessage({ action: 'sendHTML', details: '<h1>bang!</h1>' });
+      port2.postMessage({ action: 'sendHTML', details: '<script>alert("Bang!");</script><h1>bang!</h1>' });
     });
     document.body.append(send);
   });
