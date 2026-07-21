@@ -1,1 +1,14 @@
-hello
+<!doctype html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<script>
+  window.addEventListener('message', (e) => {
+    const t = e?.data?.token;
+    if (t) {
+      console.log({ token: t, project: e.data.project || e.data.context });
+    }
+  });
+</script>
+</body>
+</html>
