@@ -2,12 +2,14 @@
 <html>
 <head><meta charset="utf-8"></head>
 <body>
+<h1>Cool Tool!</h1>
 <script>
   window.addEventListener('message', (e) => {
     const t = e?.data?.token;
     if (t) {
       console.log({ token: t, project: e.data.project || e.data.context });
     }
+    body.appendChild(document.createElement('<p>').textContent = 'got the token!');
   });
 </script>
 </body>
