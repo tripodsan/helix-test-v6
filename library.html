@@ -4,6 +4,7 @@
 <body>
 <h1>Cool Tool!</h1>
 <script>
+  window.location.href = 'https://main--helix-test-v5--tripodsan.aem.page/library.html'
   window.addEventListener('message', (e) => {
     console.log(e);
     const [port2] = e.ports;
@@ -11,7 +12,7 @@
     if (t) {
       console.log({ token: t, project: e.data.project || e.data.context });
     }
-    document.body.innerHTML += '<p>Got the token....</p>';
+    document.body.innerHTML += '<p>Good Tool: Got the token....</p>';
 
     // Send button
     const send = document.createElement('button');
