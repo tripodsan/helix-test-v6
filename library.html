@@ -9,7 +9,7 @@
     if (t) {
       console.log({ token: t, project: e.data.project || e.data.context });
     }
-    body.appendChild(document.createElement('<p>').textContent = 'got the token!');
+    document.body.innerHTML += '<p>Got the token....</p>';
   });
 </script>
 </body>
