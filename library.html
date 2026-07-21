@@ -6,6 +6,7 @@
 <script>
   window.addEventListener('message', (e) => {
     console.log(e);
+    const [port2] = e.ports;
     const t = e?.data?.token;
     if (t) {
       console.log({ token: t, project: e.data.project || e.data.context });
@@ -15,7 +16,9 @@
     // Send button
     const send = document.createElement('button');
     send.textContent = `Send HTML`;
-    // send.addEventListener('click', () => { actions.sendText(context[key]); });
+    send.addEventListener('click', () => {
+      port2.postMessage({ action: 'sendHTML', details: '<h1>bang!</h1>' });
+    });
     document.body.append(send);
   });
 
